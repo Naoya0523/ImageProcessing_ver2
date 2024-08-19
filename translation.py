@@ -17,10 +17,10 @@ dx,dyはそれぞれ移動距離（整数型）
 
 class Translation:
     def __init__(self) -> None:
-        self.base_image = np.zeros((1500,1500))                            # shape=(1500,1500,3)
-        self.image = cv2.imread('images/resizedImage.jpg', cv2.IMREAD_GRAYSCALE).astype('float32') # shape=(500,500,3)
-        self.before_translation_image = self.getBeforeTranslationImage()     # shape=(1500,1500,3)
-        self.after_translation_image = np.zeros((1500,1500))               # shape=(1500,1500,3)
+        self.base_image = np.zeros((1500,1500))                            # shape=(1500,1500,)
+        self.image = cv2.imread('images/resizedImage.jpg', cv2.IMREAD_GRAYSCALE).astype('float32') # shape=(500,500,)
+        self.before_translation_image = self.getBeforeTranslationImage()     # shape=(1500,1500,)
+        self.after_translation_image = np.zeros((1500,1500))               # shape=(1500,1500,)
         self.T = None                                                        # 平行移動に使う行列T shape=(3,3,)
         self.inverse_T = None                                                # Tの逆行列
 
